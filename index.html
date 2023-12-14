@@ -34,11 +34,13 @@
 
                 function jsSubmit(){
                     let form = document.getElementById('form');
-                    form.preventDefault();
+                    event.preventDefault();
                     let element = document.querySelector('.preSub');
-                    element.style.visabulity = hidden;
+                    element.style.visibility = hidden;
                     let button = document.getElementById('message');
                     message.textContent = "Submitting your prediction ..."
+                    let xhr = new XMLHttpRequest();
+                    xhr.open("POST")
 
 
                 }
