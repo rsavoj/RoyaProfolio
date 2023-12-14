@@ -108,7 +108,7 @@
                             method: 'POST',
                             body: dataToSend
                         })
-                        .then(response => response.JSON())
+                        .then(response => response.json())
                         .then(data => {
                             data2 = JSON.parse(data);
                             console.log(data2);
