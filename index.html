@@ -52,7 +52,7 @@
                     
                     xhr.onload = function(){handleresponse(xhr)}
                     
-                   
+                   dataToSend = JSON.stringify(dataToSend);
                     xhr.send(dataToSend);
                     
 
