@@ -61,9 +61,9 @@
                 function handleResponse(xhr){
                     if(xhr.status ==200 && xhr.readyState == 4){
                         let message = document.getElementById('message');
-                        console.log(xhr.response.data);
-                        let response = JSON.parse(xhr.response.data);
-                        console.log(response);
+                        console.log(xhr.response);
+                        let response = JSON.parse(xhr.response);
+                        console.log(response.data);
                         let name = response.name;
                         let outcome =  response.output;
                         message.textContent = `Greetings ${name} your prediction ${outcome}`
