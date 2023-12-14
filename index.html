@@ -61,6 +61,7 @@
                 function handleResponse(xhr){
                     if(xhr.status ==200 && xhr.readyState == 4){
                         let message = document.getElementById('message');
+                        console.log(xhr.response);
                         let response = JSON.parse(xhr.response);
                         cosole.log(response);
                         let name = response.name;
