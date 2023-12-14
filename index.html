@@ -64,9 +64,10 @@
                         console.log(xhr.response);
                         let response = JSON.parse(xhr.response);
                         console.log(response.data);
-                        console.log(response.data.name);
-                        let name = response.name;
-                        let outcome =  response.output;
+                        data = JSON.parse(response.data);
+                        console.log(data)
+                        let name = data.name;
+                        let outcome =  data.output;
                         message.textContent = `Greetings ${name} your prediction ${outcome}`
         
                     }
