@@ -63,7 +63,7 @@
                         let message = document.getElementById('message');
                         console.log(xhr.response);
                         let response = JSON.parse(xhr.response);
-                        cosole.log(response);
+                        console.log(response);
                         let name = response.name;
                         let outcome =  response.output;
                         message.textContent = `Greetings ${name} your prediction ${outcome}`
