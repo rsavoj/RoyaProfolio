@@ -43,7 +43,10 @@
                     message.textContent = "Submitting your prediction ..."
                     let xhr = new XMLHttpRequest();
                     xhr.open("POST", "https://httpbin.org/post", true)
-                    let dataToSend = new FormData(form);
+                    let dataToSend =  {
+                        name: document.getElementById('name'),
+                        email: document.getElementById('email')
+                    }
                     xhr.setRequestHeader('sent-By', 'JS');
                     xhr.setRequestHeader('content-Type', 'application/x-www-form-urlencoded');
                     
