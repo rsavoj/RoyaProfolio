@@ -62,6 +62,7 @@
                     if(xhr.status ==200 && xhr.readyState == 4){
                         let message = document.getElementById('message');
                         let response = JSON.parse(xhr.response);
+                        cosole.log(response);
                         let name = response.name;
                         let outcome =  response.output;
                         message.textContent = `Greetings ${name} your prediction ${outcome}`
