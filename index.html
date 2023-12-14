@@ -50,7 +50,7 @@
                     xhr.onload = function(){handleResponce(xhr)}
                     
                    
-
+                    xhr.send(formData);
                     
 
 
@@ -62,6 +62,9 @@
                         outcome = xhr.responce.output;
                         message.textContent = `Greetings ${name} your prediction ${prediction}`
         
+                    }
+                    else{
+                        console.log('There was an Errpr ' + xhr.statusText);
                     }
                 }
             </script>
