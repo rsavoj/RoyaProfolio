@@ -101,8 +101,8 @@
                         
                         form.innerHTML = "Submitting your prediction ..."
                         let dataToSend =  {
-                            name: document.getElementById('name').value,
-                            email: document.getElementById('email').value
+                            name: document.getElementById('name2').value,
+                            email: document.getElementById('email2').value
                         }
                         fetch('https://httpbin.org/post',{
                             method: 'POST',
