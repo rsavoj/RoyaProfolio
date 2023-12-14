@@ -35,8 +35,10 @@
                 function jsSubmit(event){
                     let form = document.getElementById('form');
                     event.preventDefault();
-                    let element = document.querySelector('.preSub');
-                    element.style.visibility = "hidden";
+                    let element = document.querySelectorAll('.preSub');
+                    for( let el = 0; i< element.length i++){
+                        element[el].style.visibility = "hidden";
+                    }
                     let button = document.getElementById('message');
                     message.textContent = "Submitting your prediction ..."
                     let xhr = new XMLHttpRequest();
