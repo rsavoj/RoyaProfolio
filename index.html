@@ -11,170 +11,21 @@
 </head>
 
 <body>
-    <header>
-        <h1><span id="title">Roya Savoj</span></h1>   
-    </header>
+   
+
     <main>
-        <section>
-            <h2>About Roya</h2>
-            <figure>
-                <img src="RoyaBoat.jpeg" alt="Another Photo of Me" height="300" width="350" >
-                <figcaption>Roya Savoj on the day to day</figcaption>
-            </figure> 
-            <aside>
-                <h4>This picture was taken in Norway</h4>
-            </aside>
-            <picture> 
-                <img src="Roya.jpeg" height="300" width="300" alt="Image of Roya">
-            </picture> 
-            <!--This will be filled in with a real image when java is active-->
-            <template>
-                <picture> 
-                    <img src="Roya2.jpeg" height="300" width="300" alt="Image of Roya">
-                </picture>
-            </template>
-        
-            <script>
-                <!--This will be filled in. The purpose of this script tag is to make the image load after the page loads-->
-            </script>
-            <p>Roya Savoj is a 4th year Chemistry major at the University of California San Diego. She has two minors one in Computer Science and one in Health Care and social issues. She plans on pursing a PHD in computational Chemistry</p><pre>! ! !</pre>
-        </section>
-        <section>
-            <h2>Edjucation:</h2>
-                <p>University:<strong>University of California San Diego</strong></p>
-                <p>GPA:<em>3.95</em></p>
-                <iframe src="https://ucsd.edu/" title="UCSD">
-                </iframe>
-        </section>
-
-        <section>
-            <div class="experience" >
-                <h2> Experience</h2>
-                <hr>
-               
-                <details>
-                <summary><h3>Paesani Reasearch Lab</h3></summary>
-                <nav><a href="https://paesanigroup.ucsd.edu/">Paesani Group</a></nav>
-                <table>
-                    <caption>Information</caption>
-                    <colgroup>
-                        <col span="2" id="tableColumns">
-                        
-                      </colgroup>
-                    
-                    <tr>
-                      <th> Dates participated</th>
-                      <th> Feburary 2022-present</th>
-                    </tr>
-                </table>
-                
-                <ul>
-                    <li> Presented at <b>SoCalTheoChem</b> 2023</li>
-                    <li> Evaluate the effects of aqueous sodium ions on the first hydration shell of water using simulated IR spectroscopy</li>
-                    <li> Run NVE, NVT and NPT simulations on LAMMPS Molecular Dynamic Simulator</li>
-                    <li> Write python code to calculate the <code>residence Time</code> of ions in the first hydration shell</li>
-                </ul>
-                </details>
-                <details>
-                    <summary><h3>Product Design</h3></summary>
-                    <p>Windhover Ventures LLC</p>
-                    
-                    
-                    <ul>
-                        <li> Market and design five products for specialized skin care</li>
-                        <li> Conducted in-depth research on the underlying mechanisms of skin components, focusing on melanin production,
-                            water content, and elasticity regulation</li>
-                        <li> Deliver a product pitch research presentation to stakeholders at Windover Ventures LLC.</li>
-                    </ul>
-                    </details>
-                <hr>
-            
-            </div>
-        </section>
-        <section>
-            <h2>Contact</h2>
-            <form action="/action_page.php" method="get">
-                <fieldset>
-                    <legend>Contact Info:</legend>
-                    <label for="nameEntry">Enter name: </label>
-                    <input id="nameEntry"  name="name" ><br>
-                    <br>
-                    <label for="email">Enter Email: </label>
-                    <input id="email" type="email" name="email" >
-                    <br>
-
-                    <label for="message">Message: </label>
-                    <textarea id="message" name="message"></textarea>
-                    <br>
-                    <br>
-                    <label for="reason">Choose your contact reason:</label>
-                    <input list="reasons" name="reason" id="reason">
-                    <datalist id="reasons">
-                        <option value="Position">
-                        <option value="Reference">
-                        <option value="Personal">
-                    </datalist>
-                    <br><br>
-                    <label for="Need">How urgent is the responce:</label>
-                    <select name="prefered" id="Need">
-                    <optgroup label="Need">
-                        <option value="Urgent">Urgent</option>
-                        <option value="Non Urgent">Non Urgent</option>
-                    </optgroup>  
-                    </select><br><br>
-                    <button type="button" onclick="alert('You submitted Yay!')">submit</button>
-                   
-                    
-                </fieldset>
+        <section id="formCutoff">
+            <h3>Final Exam Predictor</h3>
+            <form>
+                <label for="fullName" class="preSub">Name: </label>
+                <input type="name" class="preSub" id="name" name="name">
+                <label for="email" class="preSub">Email: </label>
+                <input type="email" class="preSub" id="email" name="email">
             </form>
         </section>
-
-
     </main>
  
-    <video width="320" height="240" controls>
-        <source src="Abra.MOV" type="video/mp4">
-    </video>
-    <audio controls>
-        <source src="catMeow.mp3" type="audio/mp3">
-    </audio> 
-    <svg width="10" height="10">
-        <circle r="40" stroke="green" stroke-width="4" fill="blue" />
-    </svg> 
-  
-    <canvas id="Canvas">
-    </canvas>
-    <script>
-        let canvas = document.getElementById("Canvas");
-        let contents = canvas.getContext("2d");
-        
-        contents.beginPath()
-        contents.arc(0, 0, 10, 0, 2 * Math.PI);
-        contents.stroke()
-        contents.fillStyle = "#00GG34";
-        contents.fill()
-    </script>
-    <math>
-        <mrow>
-            <mo>E</mo>
-            <mo>=</mo>
-            <mo>m</mo>
-            <msup>
-                <mi>c</mi>
-                <mn>2</mn>
-            </msup>
-        </mrow>
-    </math>
-    <footer>
-        <h3>Thanks For Visiting</h3>
-        <ol>
-            <li><p>Author: <i>Roya Savoj</i></p></li>
-            <li> <p>Email: <i>royasavoj@gmail.com</i></p></li>
-        </ol>
-        
-       
-        
-    </footer> 
+    
 
 
 </body>
