@@ -33,13 +33,13 @@
 
 
                 function jsSubmit(event){
-                    let form = document.getElementById('form');
                     event.preventDefault();
                     let element = document.querySelectorAll('.preSub');
                     for( let el = 0; el< element.length; el++){
                         element[el].style.visibility = "hidden";
                     }
-                    let button = document.getElementById('message');
+                    let form = document.getElementById('formCutoff');
+                    let message = document.getElementById('message');
                     message.textContent = "Submitting your prediction ..."
                     let xhr = new XMLHttpRequest();
                     xhr.open("POST", "https://httpbin.org/post", true)
@@ -57,7 +57,7 @@
                 }
                 function handleResponce(xhr){
                     if(xhr.status ==200 && xhr.readyState == 4){
-                        message = getElementById('message');
+                        message = document.getElementById('message');
                         name = xhr.responce.name;
                         outcome = xhr.responce.output;
                         message.textContent = `Greetings ${name} your prediction ${prediction}`
