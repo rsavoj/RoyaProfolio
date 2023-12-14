@@ -14,7 +14,7 @@
    
 
     <main>
-        <section id="formCutoff">
+        <section id="formCutoff" action="https://httpbin.org/post" method="POST">
             <h3>Final Exam Predictor</h3>
             <form>
                 <label for="fullName" class="preSub">Name: </label>
@@ -29,18 +29,21 @@
             </form>
             <script > 
                 let button = document.getElementById('submit');
-                button.addEventListener('click', function(){jsSubmit()});
+                button.addEventListener('click', function(){jsSubmit(event)});
 
 
-                function jsSubmit(){
+                function jsSubmit(event){
                     let form = document.getElementById('form');
                     event.preventDefault();
                     let element = document.querySelector('.preSub');
-                    element.style.visibility = hidden;
+                    element.style.visibility = "hidden";
                     let button = document.getElementById('message');
                     message.textContent = "Submitting your prediction ..."
                     let xhr = new XMLHttpRequest();
-                    xhr.open("POST", "", true)
+                    xhr.open("POST", "https://httpbin.org/post", true)
+                    let dataToSend = new FormData(form);
+                    xhr.setRequestHeader('sent-By', 'JS');
+                    xhr.setRequestHeader('content-Type', 'application/x-www-form-urlencoded');
 
 
                 }
