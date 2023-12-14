@@ -50,7 +50,7 @@
                     xhr.onload = function(){handleResponce(xhr)}
                     
                    
-                    xhr.send(formData);
+                    xhr.send(dataToSend);
                     
 
 
@@ -58,13 +58,13 @@
                 function handleResponce(xhr){
                     if(xhr.status ==200 && xhr.readyState == 4){
                         message = document.getElementById('message');
-                        name = xhr.responce.name;
-                        outcome = xhr.responce.output;
-                        message.textContent = `Greetings ${name} your prediction ${prediction}`
+                        name = xhr.response.name;
+                        outcome = xhr.response.output;
+                        message.textContent = `Greetings ${name} your prediction ${outcome}`
         
                     }
                     else{
-                        console.log('There was an Errpr ' + xhr.statusText);
+                        console.log('There was an Error ' + xhr.statusText);
                     }
                 }
             </script>
