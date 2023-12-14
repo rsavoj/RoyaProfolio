@@ -26,6 +26,17 @@
                 <input type="submit" class="preSub" value="submit" id="submit">
 
             </form>
+            <script > 
+                let button = document.getElementById('submit');
+                button.addEventListener('click', function(){jsSubmit()});
+
+
+                function jsSubmit(){
+                    let form = document.getElementById('form')
+                    form.preventDefault();
+                    
+                }
+            </script>
         </section>
     </main>
  
