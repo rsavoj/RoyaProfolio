@@ -24,6 +24,7 @@
                 <input type="email" class="preSub" id="email" name="email">
                 <br>
                 <input type="submit" class="preSub" value="submit" id="submit">
+                <output id="message"></output>
 
             </form>
             <script > 
@@ -32,9 +33,14 @@
 
 
                 function jsSubmit(){
-                    let form = document.getElementById('form')
+                    let form = document.getElementById('form');
                     form.preventDefault();
-                    
+                    let element = document.querySelector('.preSub');
+                    element.style.visabulity = hidden;
+                    let button = document.getElementById('message');
+                    message.textContent = "Submitting your prediction ..."
+
+
                 }
             </script>
         </section>
