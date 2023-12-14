@@ -46,8 +46,23 @@
                     let dataToSend = new FormData(form);
                     xhr.setRequestHeader('sent-By', 'JS');
                     xhr.setRequestHeader('content-Type', 'application/x-www-form-urlencoded');
+                    
+                    xhr.onload = function(){handleResponce(xhr)}
+                    
+                   
+
+                    
 
 
+                }
+                function handleResponce(xhr){
+                    if(xhr.status ==200 && xhr.readyState == 4){
+                        message = getElementById('message');
+                        name = xhr.responce.name;
+                        outcome = xhr.responce.output;
+                        message.textContent = `Greetings ${name} your prediction ${prediction}`
+        
+                    }
                 }
             </script>
         </section>
